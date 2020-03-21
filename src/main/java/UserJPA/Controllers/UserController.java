@@ -17,7 +17,7 @@ public class UserController {
     private UserRepository userRepository;
 
 //    @GetMapping(path = "/getByUN/{username}")
-    public UserE retrieveUser(@PathVariable String username) {
+    public UserE retrieveUser(String username) {
         try {
             Optional<UserE> user = userRepository.findByUN(username);
             return user.get();
@@ -58,8 +58,8 @@ public class UserController {
     }
 
     @PostMapping("/check/")
-    public boolean checkUser(@RequestBody UserVO userVO) {
-        UserE user = UserE.fromVO(userVO);
+    public boolean checkUser(@RequestBody Object userVO) {
+        UserE user = UserE.fromVO((UserVO) userVO);
         UserE savedUser;
         try {
             savedUser = retrieveUser(user.getUsername());
