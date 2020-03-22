@@ -46,6 +46,7 @@ public class UserController {
 //        return null;
 //    }
 
+    @CrossOrigin(origins = "*")
     @PostMapping("/")
     public boolean createUser(@RequestBody UserVO userVO) {
         UserE user = UserE.fromVO(userVO);
@@ -57,8 +58,9 @@ public class UserController {
         return false;
     }
 
+    @CrossOrigin(origins = "*")
     @PostMapping("/check/")
-    public boolean checkUser(@RequestBody Object userVO) {
+    public boolean checkUser(@RequestBody UserVO userVO) {
         UserE user = UserE.fromVO((UserVO) userVO);
         UserE savedUser;
         try {
