@@ -1,13 +1,11 @@
 package UserJPA.Entities;
 
 import UserJPA.vo.MovieVO;
-import UserJPA.vo.UserVO;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 
 @Where(clause = "is_full = 0")
-//@SQLDelete(sql = "update regions set deleted = 1 where id = ?")
 @Entity(name = "movies")
 public class MovieE {
     @Id
