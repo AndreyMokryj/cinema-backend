@@ -1,5 +1,7 @@
 package UserJPA.Entities;
 
+import UserJPA.vo.MovieVO;
+import UserJPA.vo.UserVO;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
@@ -58,5 +60,15 @@ public class MovieE {
 
     public void setImageLink(String imageLink) {
         this.imageLink = imageLink;
+    }
+
+    public static MovieE fromVO(MovieVO movieVO){
+        MovieE movie = new MovieE();
+        movie.setId(movieVO.getId());
+        movie.setName(movieVO.getName());
+        movie.setNameOriginal(movieVO.getNameOriginal());
+        movie.setDescription(movieVO.getDescription());
+        movie.setImageLink(movieVO.getImageLink());
+        return movie;
     }
 }
