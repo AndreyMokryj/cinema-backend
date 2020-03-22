@@ -1,4 +1,4 @@
-package UserJPA.Entities;
+package UserJPA.vo;
 
 public class UserVO {
     private String username;

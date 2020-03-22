@@ -1,11 +1,9 @@
 package UserJPA.Entities;
 
+import UserJPA.vo.UserVO;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.HashMap;
-import java.util.Map;
 
 //@Where(clause = "deleted = 0")
 //@SQLDelete(sql = "update regions set deleted = 1 where id = ?")
@@ -47,13 +45,6 @@ public class UserE {
         user.setPassword(userVO.getPassword());
         return user;
     }
-
-//    public static UserE fromMap(Map o){
-//        UserE user = new UserE();
-//        user.setUsername(o.get("username").toString());
-//        user.setPassword(o.get("password").toString());
-//        return user;
-//    }
 
     public String toLog(){
         String x  = "{username: " + getUsername() + ", password: " + getPassword() + "}";

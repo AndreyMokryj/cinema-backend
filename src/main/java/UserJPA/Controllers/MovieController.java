@@ -1,8 +1,10 @@
 package UserJPA.Controllers;
 
+import UserJPA.Entities.MovieE;
 import UserJPA.Entities.UserE;
-import UserJPA.vo.UserVO;
+import UserJPA.Repositories.MovieRepository;
 import UserJPA.Repositories.UserRepository;
+import UserJPA.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
@@ -10,28 +12,29 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController    // This means that this class is a Controller
-@RequestMapping(path="/users")
+@RequestMapping(path="/movies")
 @Component
-public class UserController {
+public class MovieController {
     @Autowired
-    private UserRepository userRepository;
+    private MovieRepository movieRepository;
 
 //    @GetMapping(path = "/getByUN/{username}")
-    public UserE retrieveUser(String username) {
-        try {
-            Optional<UserE> user = userRepository.findByUN(username);
-            return user.get();
-        }
-        catch (Exception ex){
-            return null;
-        }
-    }
+//    public UserE retrieveUser(String username) {
+//        try {
+//            Optional<UserE> user = userRepository.findByUN(username);
+//            return user.get();
+//        }
+//        catch (Exception ex){
+//            return null;
+//        }
+//    }
 
+    @CrossOrigin(origins = "*")
     @GetMapping(path="/")
     public @ResponseBody
-    Iterable<UserE> getAll() {
+    Iterable<MovieE> getAll() {
         // This returns a JSON or XML with the users
-        return userRepository.findAll();
+        return movieRepository.findAll();
     }
 
 //    @GetMapping("/{id}")
@@ -45,33 +48,6 @@ public class UserController {
 //        }
 //        return null;
 //    }
-
-    @CrossOrigin(origins = "*")
-    @PostMapping("/")
-    public boolean createUser(@RequestBody UserVO userVO) {
-        UserE user = UserE.fromVO(userVO);
-        UserE savedUser;
-        if (retrieveUser(user.getUsername()) == null) {
-            savedUser = userRepository.save(user);
-            return true;
-        }
-        return false;
-    }
-
-    @CrossOrigin(origins = "*")
-    @PostMapping("/check/")
-    public boolean checkUser(@RequestBody UserVO userVO) {
-        UserE user = UserE.fromVO((UserVO) userVO);
-        UserE savedUser;
-        try {
-            savedUser = retrieveUser(user.getUsername());
-            return savedUser.getPassword().equals(user.getPassword());
-        }
-        catch (Exception e) {
-            return false;
-        }
-
-    }
 
 //    @DeleteMapping("/delete/{id}")
 //    public void deleteUser(@PathVariable long id) {
