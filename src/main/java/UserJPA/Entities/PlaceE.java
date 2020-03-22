@@ -13,10 +13,13 @@ public class PlaceE {
     @Column(name = "session_id")
     private Long sessionId;
 
+    @Column(name = "sit_row")
     private int row;
 
+    @Column(name = "sit_column")
     private int column;
 
+    @Column(name = "sit_status")
     private int status;
 
     public Long getSessionId() {

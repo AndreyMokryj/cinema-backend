@@ -1,10 +1,15 @@
 package UserJPA.Controllers;
 
 import UserJPA.Entities.PlaceE;
+import UserJPA.Entities.SessionE;
 import UserJPA.Repositories.PlaceRepository;
+import UserJPA.Repositories.SessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController    // This means that this class is a Controller
 @RequestMapping(path="/places")
@@ -12,6 +17,9 @@ import org.springframework.web.bind.annotation.*;
 public class PlaceController {
     @Autowired
     private PlaceRepository placeRepository;
+
+//    @Autowired
+//    private SessionRepository sessionRepository;
 
 //    @GetMapping(path = "/getByUN/{username}")
 //    public UserE retrieveUser(String username) {
@@ -28,7 +36,21 @@ public class PlaceController {
     @GetMapping(path="/")
     public @ResponseBody
     Iterable<PlaceE> getAll() {
-        // This returns a JSON or XML with the users
+//        Iterable<SessionE> sessions = sessionRepository.findAll();
+//        List<SessionE> sessionEList = (List<SessionE>) sessions;
+//        List<PlaceE> placees = new ArrayList<>();
+//        for (SessionE session : sessionEList){
+//            for (int row = 1; row <= 10; row++){
+//                for (int column = 1; column <= 20; column++){
+//                    PlaceE place = new PlaceE();
+//                    place.setSessionId(session.getId());
+//                    place.setRow(row);
+//                    place.setColumn(column);
+//
+//                    placeRepository.save(place);
+//                }
+//            }
+//        }
         return placeRepository.findAll();
     }
 
