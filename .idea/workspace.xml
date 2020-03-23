@@ -7,6 +7,27 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CinemaService.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/Application1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/Application1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/Controllers/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/Controllers/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/Controllers/PlaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/Controllers/PlaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/Controllers/SessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/Controllers/SessionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/Controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/Entities/MovieE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/Entities/MovieE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/Entities/PlaceE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/Entities/PlaceE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/Entities/SessionE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/Entities/SessionE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/Entities/UserE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/Entities/UserE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/Repositories/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/Repositories/MovieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/Repositories/PlaceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/Repositories/PlaceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/Repositories/SessionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/Repositories/SessionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/Repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/Repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/vo/MovieVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/vo/MovieVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/vo/PlaceVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/vo/PlaceVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/vo/SessionVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/vo/SessionVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserJPA/vo/UserVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaJPA/vo/UserVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UserJPA/Application1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UserJPA/Controllers/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UserJPA/Entities/UserE.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UserJPA/Repositories/UserRepository.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,54 +82,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="CinemaService" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="CinemaService" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Application1" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="Application1" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="CinemaService" />
       <extension name="coverage">
         <pattern>
@@ -121,11 +95,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.Application1" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -139,7 +108,7 @@
       <updated>1584732907460</updated>
       <workItem from="1584732911150" duration="144000" />
       <workItem from="1584733303906" duration="11721000" />
-      <workItem from="1584895573291" duration="12984000" />
+      <workItem from="1584895573291" duration="13136000" />
     </task>
     <servers />
   </component>
@@ -162,70 +131,70 @@
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state x="458" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.826@0.23.1440.826" timestamp="1584733767940" />
-    <state width="1398" height="207" key="GridCell.Tab.0.bottom" timestamp="1584966290022">
+    <state width="1398" height="257" key="GridCell.Tab.0.bottom" timestamp="1584966361006">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1398" height="207" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1584815901587" />
-    <state width="1398" height="207" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1584966290022" />
+    <state width="1398" height="257" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1584966361006" />
     <state width="1398" height="207" key="GridCell.Tab.0.bottom/0.23.1440.826@0.23.1440.826" timestamp="1584735372470" />
-    <state width="1398" height="207" key="GridCell.Tab.0.center" timestamp="1584966290021">
+    <state width="1398" height="257" key="GridCell.Tab.0.center" timestamp="1584966361005">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1398" height="207" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1584815901584" />
-    <state width="1398" height="207" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1584966290021" />
+    <state width="1398" height="257" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1584966361005" />
     <state width="1398" height="207" key="GridCell.Tab.0.center/0.23.1440.826@0.23.1440.826" timestamp="1584735372469" />
-    <state width="1398" height="207" key="GridCell.Tab.0.left" timestamp="1584966290020">
+    <state width="1398" height="257" key="GridCell.Tab.0.left" timestamp="1584966361004">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1398" height="207" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1584815901579" />
-    <state width="1398" height="207" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1584966290020" />
+    <state width="1398" height="257" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1584966361004" />
     <state width="1398" height="207" key="GridCell.Tab.0.left/0.23.1440.826@0.23.1440.826" timestamp="1584735372468" />
-    <state width="1398" height="207" key="GridCell.Tab.0.right" timestamp="1584966290021">
+    <state width="1398" height="257" key="GridCell.Tab.0.right" timestamp="1584966361005">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1398" height="207" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1584815901584" />
-    <state width="1398" height="207" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1584966290021" />
+    <state width="1398" height="257" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1584966361005" />
     <state width="1398" height="207" key="GridCell.Tab.0.right/0.23.1440.826@0.23.1440.826" timestamp="1584735372469" />
-    <state width="1398" height="207" key="GridCell.Tab.1.bottom" timestamp="1584966290023">
+    <state width="1398" height="257" key="GridCell.Tab.1.bottom" timestamp="1584966361008">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1398" height="207" key="GridCell.Tab.1.bottom/0.23.1440.823@0.23.1440.823" timestamp="1584815901590" />
-    <state width="1398" height="207" key="GridCell.Tab.1.bottom/0.23.1440.825@0.23.1440.825" timestamp="1584966290023" />
+    <state width="1398" height="257" key="GridCell.Tab.1.bottom/0.23.1440.825@0.23.1440.825" timestamp="1584966361008" />
     <state width="1398" height="207" key="GridCell.Tab.1.bottom/0.23.1440.826@0.23.1440.826" timestamp="1584735372471" />
-    <state width="1398" height="207" key="GridCell.Tab.1.center" timestamp="1584966290022">
+    <state width="1398" height="257" key="GridCell.Tab.1.center" timestamp="1584966361008">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1398" height="207" key="GridCell.Tab.1.center/0.23.1440.823@0.23.1440.823" timestamp="1584815901589" />
-    <state width="1398" height="207" key="GridCell.Tab.1.center/0.23.1440.825@0.23.1440.825" timestamp="1584966290022" />
+    <state width="1398" height="257" key="GridCell.Tab.1.center/0.23.1440.825@0.23.1440.825" timestamp="1584966361008" />
     <state width="1398" height="207" key="GridCell.Tab.1.center/0.23.1440.826@0.23.1440.826" timestamp="1584735372470" />
-    <state width="1398" height="207" key="GridCell.Tab.1.left" timestamp="1584966290022">
+    <state width="1398" height="257" key="GridCell.Tab.1.left" timestamp="1584966361007">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1398" height="207" key="GridCell.Tab.1.left/0.23.1440.823@0.23.1440.823" timestamp="1584815901589" />
-    <state width="1398" height="207" key="GridCell.Tab.1.left/0.23.1440.825@0.23.1440.825" timestamp="1584966290022" />
+    <state width="1398" height="257" key="GridCell.Tab.1.left/0.23.1440.825@0.23.1440.825" timestamp="1584966361007" />
     <state width="1398" height="207" key="GridCell.Tab.1.left/0.23.1440.826@0.23.1440.826" timestamp="1584735372470" />
-    <state width="1398" height="207" key="GridCell.Tab.1.right" timestamp="1584966290023">
+    <state width="1398" height="257" key="GridCell.Tab.1.right" timestamp="1584966361008">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1398" height="207" key="GridCell.Tab.1.right/0.23.1440.823@0.23.1440.823" timestamp="1584815901590" />
-    <state width="1398" height="207" key="GridCell.Tab.1.right/0.23.1440.825@0.23.1440.825" timestamp="1584966290023" />
+    <state width="1398" height="257" key="GridCell.Tab.1.right/0.23.1440.825@0.23.1440.825" timestamp="1584966361008" />
     <state width="1398" height="207" key="GridCell.Tab.1.right/0.23.1440.826@0.23.1440.826" timestamp="1584735372471" />
-    <state width="1398" height="257" key="GridCell.Tab.2.bottom" timestamp="1584909360948">
+    <state width="1398" height="257" key="GridCell.Tab.2.bottom" timestamp="1584966361009">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state width="1398" height="257" key="GridCell.Tab.2.bottom/0.23.1440.825@0.23.1440.825" timestamp="1584909360948" />
-    <state width="1398" height="257" key="GridCell.Tab.2.center" timestamp="1584909360947">
+    <state width="1398" height="257" key="GridCell.Tab.2.bottom/0.23.1440.825@0.23.1440.825" timestamp="1584966361009" />
+    <state width="1398" height="257" key="GridCell.Tab.2.center" timestamp="1584966361009">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state width="1398" height="257" key="GridCell.Tab.2.center/0.23.1440.825@0.23.1440.825" timestamp="1584909360947" />
-    <state width="1398" height="257" key="GridCell.Tab.2.left" timestamp="1584909360947">
+    <state width="1398" height="257" key="GridCell.Tab.2.center/0.23.1440.825@0.23.1440.825" timestamp="1584966361009" />
+    <state width="1398" height="257" key="GridCell.Tab.2.left" timestamp="1584966361008">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state width="1398" height="257" key="GridCell.Tab.2.left/0.23.1440.825@0.23.1440.825" timestamp="1584909360947" />
-    <state width="1398" height="257" key="GridCell.Tab.2.right" timestamp="1584909360948">
+    <state width="1398" height="257" key="GridCell.Tab.2.left/0.23.1440.825@0.23.1440.825" timestamp="1584966361008" />
+    <state width="1398" height="257" key="GridCell.Tab.2.right" timestamp="1584966361009">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state width="1398" height="257" key="GridCell.Tab.2.right/0.23.1440.825@0.23.1440.825" timestamp="1584909360948" />
+    <state width="1398" height="257" key="GridCell.Tab.2.right/0.23.1440.825@0.23.1440.825" timestamp="1584966361009" />
     <state x="375" y="190" width="689" height="472" key="find.popup" timestamp="1584966205610">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
