@@ -18,17 +18,6 @@ public class MovieController {
     @Autowired
     private MovieRepository movieRepository;
 
-//    @GetMapping(path = "/getByUN/{username}")
-//    public UserE retrieveUser(String username) {
-//        try {
-//            Optional<UserE> user = userRepository.findByUN(username);
-//            return user.get();
-//        }
-//        catch (Exception ex){
-//            return null;
-//        }
-//    }
-
     @CrossOrigin(origins = "*")
     @GetMapping(path="/")
     public @ResponseBody

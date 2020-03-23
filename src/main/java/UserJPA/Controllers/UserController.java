@@ -17,7 +17,7 @@ public class UserController {
     private UserRepository userRepository;
 
 //    @GetMapping(path = "/getByUN/{username}")
-    public UserE retrieveUser(String username) {
+    private UserE retrieveUser(String username) {
         try {
             Optional<UserE> user = userRepository.findByUN(username);
             return user.get();
@@ -27,12 +27,12 @@ public class UserController {
         }
     }
 
-    @GetMapping(path="/")
-    public @ResponseBody
-    Iterable<UserE> getAll() {
-        // This returns a JSON or XML with the users
-        return userRepository.findAll();
-    }
+//    @GetMapping(path="/")
+//    public @ResponseBody
+//    Iterable<UserE> getAll() {
+//        // This returns a JSON or XML with the users
+//        return userRepository.findAll();
+//    }
 
 //    @GetMapping("/{id}")
 //    public UserE retrieveUser(@PathVariable long id) {
