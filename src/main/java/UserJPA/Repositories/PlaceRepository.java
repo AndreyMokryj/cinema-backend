@@ -1,7 +1,6 @@
 package UserJPA.Repositories;
 
 import UserJPA.Entities.PlaceE;
-import UserJPA.Entities.SessionE;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;

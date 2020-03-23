@@ -1,27 +1,14 @@
 package UserJPA.Entities;
 
 import UserJPA.vo.UserVO;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-//@Where(clause = "deleted = 0")
-//@SQLDelete(sql = "update regions set deleted = 1 where id = ?")
 @Entity(name = "users")
 public class UserE {
     @Id
-//    @GeneratedValue(strategy= GenerationType.IDENTITY)
-//    private Long id;
     private String username;
     private String password;
-
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
 
     public String getUsername() {
         return username;

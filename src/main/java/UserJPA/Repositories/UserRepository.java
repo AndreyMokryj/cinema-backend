@@ -10,7 +10,6 @@ import java.util.Optional;
 
 public interface UserRepository extends CrudRepository<UserE, Long> {
     @Query("SELECT u FROM users u where u.username = :un")
-//    @Modifying
     @Transactional
     public Optional<UserE> findByUN(@PathVariable String un);
 }

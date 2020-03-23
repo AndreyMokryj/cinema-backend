@@ -46,10 +46,4 @@ public class MovieVO {
     public void setImageLink(String imageLink) {
         this.imageLink = imageLink;
     }
-
-
-//    public String toString(){
-//        String x  = "{username: " + getUsername() + ", password: " + getPassword() + "}";
-//        return x;
-//    }
 }
