@@ -53,6 +53,14 @@ public class PlaceController {
     }
 
     @CrossOrigin(origins = "*")
+    @GetMapping(path="/unselect/{id}")
+    public void unselectPlace(@PathVariable long id) {
+        PlaceE place = getPlace(id);
+        place.setStatus(0);
+        placeRepository.save(place);
+    }
+
+    @CrossOrigin(origins = "*")
     @PostMapping(path="/book/")
     public boolean bookPlaces(@RequestBody Iterable<Long> ids) {
         for (Long id : ids) {
@@ -66,5 +74,15 @@ public class PlaceController {
             }
         }
         return true;
+    }
+
+    @CrossOrigin(origins = "*")
+    @PostMapping(path="/unbook/")
+    public void unbookPlaces(@RequestBody Iterable<Long> ids) {
+        for (Long id : ids) {
+            PlaceE placeE = getPlace(id);
+            placeE.setStatus(0);
+            placeRepository.save(placeE);
+        }
     }
 }
