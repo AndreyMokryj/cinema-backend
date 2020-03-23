@@ -1,4 +1,4 @@
-package UserJPA.vo;
+package CinemaJPA.vo;
 
 import java.time.LocalDateTime;
 

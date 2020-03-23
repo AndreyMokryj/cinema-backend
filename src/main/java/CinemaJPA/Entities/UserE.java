@@ -1,6 +1,6 @@
-package UserJPA.Entities;
+package CinemaJPA.Entities;
 
-import UserJPA.vo.UserVO;
+import CinemaJPA.vo.UserVO;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 

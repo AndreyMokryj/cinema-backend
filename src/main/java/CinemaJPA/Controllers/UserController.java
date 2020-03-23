@@ -1,8 +1,8 @@
-package UserJPA.Controllers;
+package CinemaJPA.Controllers;
 
-import UserJPA.Entities.UserE;
-import UserJPA.vo.UserVO;
-import UserJPA.Repositories.UserRepository;
+import CinemaJPA.Entities.UserE;
+import CinemaJPA.vo.UserVO;
+import CinemaJPA.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;

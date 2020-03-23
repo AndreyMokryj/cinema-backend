@@ -1,6 +1,6 @@
-package UserJPA.Entities;
+package CinemaJPA.Entities;
 
-import UserJPA.vo.MovieVO;
+import CinemaJPA.vo.MovieVO;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;

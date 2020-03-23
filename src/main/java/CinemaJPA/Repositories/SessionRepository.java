@@ -1,6 +1,6 @@
-package UserJPA.Repositories;
+package CinemaJPA.Repositories;
 
-import UserJPA.Entities.SessionE;
+import CinemaJPA.Entities.SessionE;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;

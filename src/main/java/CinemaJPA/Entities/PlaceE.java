@@ -1,6 +1,6 @@
-package UserJPA.Entities;
+package CinemaJPA.Entities;
 
-import UserJPA.vo.PlaceVO;
+import CinemaJPA.vo.PlaceVO;
 
 import javax.persistence.*;
 

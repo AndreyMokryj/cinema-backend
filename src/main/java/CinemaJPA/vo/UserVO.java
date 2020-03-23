@@ -1,4 +1,4 @@
-package UserJPA.vo;
+package CinemaJPA.vo;
 
 public class UserVO {
     private String username;

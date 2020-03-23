@@ -1,7 +1,7 @@
-package UserJPA.Controllers;
+package CinemaJPA.Controllers;
 
-import UserJPA.Entities.PlaceE;
-import UserJPA.Repositories.PlaceRepository;
+import CinemaJPA.Entities.PlaceE;
+import CinemaJPA.Repositories.PlaceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;

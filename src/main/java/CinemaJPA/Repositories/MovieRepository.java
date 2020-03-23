@@ -1,6 +1,6 @@
-package UserJPA.Repositories;
+package CinemaJPA.Repositories;
 
-import UserJPA.Entities.MovieE;
+import CinemaJPA.Entities.MovieE;
 import org.springframework.data.repository.CrudRepository;
 
 public interface MovieRepository extends CrudRepository<MovieE, Long> { }

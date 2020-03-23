@@ -1,7 +1,7 @@
-package UserJPA.Controllers;
+package CinemaJPA.Controllers;
 
-import UserJPA.Entities.SessionE;
-import UserJPA.Repositories.SessionRepository;
+import CinemaJPA.Entities.SessionE;
+import CinemaJPA.Repositories.SessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;

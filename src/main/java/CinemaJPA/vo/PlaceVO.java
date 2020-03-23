@@ -1,4 +1,4 @@
-package UserJPA.vo;
+package CinemaJPA.vo;
 
 public class PlaceVO {
     private Long id;
