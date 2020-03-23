@@ -1,16 +1,11 @@
 package UserJPA.Controllers;
 
 import UserJPA.Entities.PlaceE;
-import UserJPA.Entities.SessionE;
-import UserJPA.Entities.UserE;
 import UserJPA.Repositories.PlaceRepository;
-import UserJPA.Repositories.SessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 @RestController    // This means that this class is a Controller
@@ -55,5 +50,21 @@ public class PlaceController {
             return true;
         }
         return false;
+    }
+
+    @CrossOrigin(origins = "*")
+    @PostMapping(path="/book/")
+    public boolean bookPlaces(@RequestBody Iterable<Long> ids) {
+        for (Long id : ids) {
+            PlaceE placeE = getPlace(id);
+            if (placeE.getStatus() != 2) {
+                placeE.setStatus(2);
+                placeRepository.save(placeE);
+            }
+            else {
+                return false;
+            }
+        }
+        return true;
     }
 }
