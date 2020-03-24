@@ -63,6 +63,12 @@ public class OrderController {
             }
         }
         orderRepository.save(order);
+
+        for (Long id : orderVO.getPlaceIds()) {
+            PlaceE placeE = getPlace(id);
+            placeE.setUserName(orderVO.getUserName());
+            placeRepository.save(placeE);
+        }
         return true;
     }
 
