@@ -1,10 +1,8 @@
 package CinemaJPA.Controllers;
 
-import CinemaJPA.Entities.OrderE;
 import CinemaJPA.Entities.PlaceE;
 import CinemaJPA.Repositories.OrderRepository;
 import CinemaJPA.Repositories.PlaceRepository;
-import CinemaJPA.vo.OrderVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
@@ -67,25 +65,6 @@ public class PlaceController {
         place.setUserName(null);
         placeRepository.save(place);
     }
-
-//    @CrossOrigin(origins = "*")
-//    @PostMapping(path="/book/")
-//    public boolean bookPlaces(@RequestBody OrderVO orderVO) {
-//        OrderE order = OrderE.fromVO(orderVO);
-//
-//        for (Long id : orderVO.getPlaceIds()) {
-//            PlaceE placeE = getPlace(id);
-//            if (placeE.getStatus() != 2) {
-//                placeE.setStatus(2);
-//                placeRepository.save(placeE);
-//            }
-//            else {
-//                return false;
-//            }
-//        }
-//        orderRepository.save(order);
-//        return true;
-//    }
 
     @CrossOrigin(origins = "*")
     @PostMapping(path="/unbook/")
