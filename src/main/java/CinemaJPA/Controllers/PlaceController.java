@@ -1,7 +1,10 @@
 package CinemaJPA.Controllers;
 
+import CinemaJPA.Entities.OrderE;
 import CinemaJPA.Entities.PlaceE;
+import CinemaJPA.Repositories.OrderRepository;
 import CinemaJPA.Repositories.PlaceRepository;
+import CinemaJPA.vo.OrderVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +17,9 @@ import java.util.Optional;
 public class PlaceController {
     @Autowired
     private PlaceRepository placeRepository;
+
+    @Autowired
+    private OrderRepository orderRepository;
 
     private PlaceE getPlace(long id) {
         try {
@@ -41,11 +47,12 @@ public class PlaceController {
     }
 
     @CrossOrigin(origins = "*")
-    @GetMapping(path="/select/{id}")
-    public boolean selectPlace(@PathVariable long id) {
+    @GetMapping(path="/select/{id}/user/{user}")
+    public boolean selectPlace(@PathVariable long id, @PathVariable String user) {
         PlaceE place = getPlace(id);
         if(place.getStatus() == 0){
             place.setStatus(1);
+            place.setUserName(user);
             placeRepository.save(place);
             return true;
         }
@@ -57,24 +64,28 @@ public class PlaceController {
     public void unselectPlace(@PathVariable long id) {
         PlaceE place = getPlace(id);
         place.setStatus(0);
+        place.setUserName(null);
         placeRepository.save(place);
     }
 
-    @CrossOrigin(origins = "*")
-    @PostMapping(path="/book/")
-    public boolean bookPlaces(@RequestBody Iterable<Long> ids) {
-        for (Long id : ids) {
-            PlaceE placeE = getPlace(id);
-            if (placeE.getStatus() != 2) {
-                placeE.setStatus(2);
-                placeRepository.save(placeE);
-            }
-            else {
-                return false;
-            }
-        }
-        return true;
-    }
+//    @CrossOrigin(origins = "*")
+//    @PostMapping(path="/book/")
+//    public boolean bookPlaces(@RequestBody OrderVO orderVO) {
+//        OrderE order = OrderE.fromVO(orderVO);
+//
+//        for (Long id : orderVO.getPlaceIds()) {
+//            PlaceE placeE = getPlace(id);
+//            if (placeE.getStatus() != 2) {
+//                placeE.setStatus(2);
+//                placeRepository.save(placeE);
+//            }
+//            else {
+//                return false;
+//            }
+//        }
+//        orderRepository.save(order);
+//        return true;
+//    }
 
     @CrossOrigin(origins = "*")
     @PostMapping(path="/unbook/")
