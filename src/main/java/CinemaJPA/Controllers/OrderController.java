@@ -41,9 +41,9 @@ public class OrderController {
     @CrossOrigin(origins = "*")
     @GetMapping(path="/user/{user}")
     public @ResponseBody
-    Iterable<OrderE> getByUN(@PathVariable String un) {
+    Iterable<OrderE> getByUN(@PathVariable String user) {
         // This returns a JSON or XML with the users
-        return orderRepository.findByUN(un);
+        return orderRepository.findByUN(user);
     }
 
 
