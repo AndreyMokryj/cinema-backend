@@ -22,6 +22,9 @@ public class PlaceE {
     @Column(name = "sit_status")
     private int status;
 
+    @Column(name = "user_name")
+    private String userName;
+
     public Long getSessionId() {
         return sessionId;
     }
@@ -61,6 +64,7 @@ public class PlaceE {
         place.setRow(placeVO.getRow());
         place.setColumn(placeVO.getColumn());
         place.setStatus(placeVO.getStatus());
+        place.setUserName(placeVO.getUserName());
         return place;
     }
 
@@ -70,5 +74,13 @@ public class PlaceE {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }

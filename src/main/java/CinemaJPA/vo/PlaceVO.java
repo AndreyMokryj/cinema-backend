@@ -6,6 +6,7 @@ public class PlaceVO {
     private int row;
     private int column;
     private int status;
+    private String userName;
 
 
     public Long getSessionId() {
@@ -46,5 +47,13 @@ public class PlaceVO {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
