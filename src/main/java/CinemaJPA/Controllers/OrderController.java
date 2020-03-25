@@ -2,8 +2,10 @@ package CinemaJPA.Controllers;
 
 import CinemaJPA.Entities.OrderE;
 import CinemaJPA.Entities.PlaceE;
+import CinemaJPA.Entities.UserE;
 import CinemaJPA.Repositories.OrderRepository;
 import CinemaJPA.Repositories.PlaceRepository;
+import CinemaJPA.Repositories.UserRepository;
 import CinemaJPA.vo.OrderVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -20,6 +22,19 @@ public class OrderController {
 
     @Autowired
     private PlaceRepository placeRepository;
+
+    @Autowired
+    private UserRepository userRepository;
+
+    private UserE retrieveUser(String username) {
+        try {
+            Optional<UserE> user = userRepository.findByUN(username);
+            return user.get();
+        }
+        catch (Exception ex){
+            return null;
+        }
+    }
 
     private PlaceE getPlace(long id) {
         try {
@@ -51,6 +66,9 @@ public class OrderController {
     @PostMapping(path="/book/")
     public boolean bookPlaces(@RequestBody OrderVO orderVO) {
         OrderE order = OrderE.fromVO(orderVO);
+        if (retrieveUser(orderVO.getUserName()) == null){
+            return false;
+        }
 
         for (Long id : orderVO.getPlaceIds()) {
             PlaceE placeE = getPlace(id);
@@ -71,5 +89,4 @@ public class OrderController {
         }
         return true;
     }
-
 }

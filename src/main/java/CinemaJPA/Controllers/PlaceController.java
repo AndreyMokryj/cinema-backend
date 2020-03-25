@@ -1,8 +1,10 @@
 package CinemaJPA.Controllers;
 
 import CinemaJPA.Entities.PlaceE;
-import CinemaJPA.Repositories.OrderRepository;
+import CinemaJPA.Entities.UserE;
 import CinemaJPA.Repositories.PlaceRepository;
+import CinemaJPA.Repositories.UserRepository;
+import CinemaJPA.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +19,17 @@ public class PlaceController {
     private PlaceRepository placeRepository;
 
     @Autowired
-    private OrderRepository orderRepository;
+    private UserRepository userRepository;
+
+    private UserE retrieveUser(String username) {
+        try {
+            Optional<UserE> user = userRepository.findByUN(username);
+            return user.get();
+        }
+        catch (Exception ex){
+            return null;
+        }
+    }
 
     private PlaceE getPlace(long id) {
         try {
@@ -45,12 +57,12 @@ public class PlaceController {
     }
 
     @CrossOrigin(origins = "*")
-    @GetMapping(path="/select/{id}/user/{user}")
-    public boolean selectPlace(@PathVariable long id, @PathVariable String user) {
+    @PostMapping(path="/select/{id}")
+    public boolean selectPlace(@PathVariable long id, @RequestBody UserVO userVO) {
         PlaceE place = getPlace(id);
-        if(place.getStatus() == 0){
+        if(place.getStatus() == 0 && retrieveUser(userVO.getUsername()) != null){
             place.setStatus(1);
-            place.setUserName(user);
+            place.setUserName(userVO.getUsername());
             placeRepository.save(place);
             return true;
         }
@@ -72,6 +84,7 @@ public class PlaceController {
         for (Long id : ids) {
             PlaceE placeE = getPlace(id);
             placeE.setStatus(0);
+            placeE.setUserName(null);
             placeRepository.save(placeE);
         }
     }
