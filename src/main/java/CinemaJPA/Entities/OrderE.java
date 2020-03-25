@@ -1,11 +1,8 @@
 package CinemaJPA.Entities;
 
-import CinemaJPA.vo.MovieVO;
 import CinemaJPA.vo.OrderVO;
-import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
-import java.util.List;
 
 //@Where(clause = "status = 0")
 @Entity(name = "orders")
@@ -15,7 +12,7 @@ public class OrderE {
     private Long id;
 
     @Column(name="user_name")
-    private String userName;
+    private String username;
     private int status;
 
     @Column(name="place_ids")
@@ -34,7 +31,7 @@ public class OrderE {
     public static OrderE fromVO(OrderVO orderVO){
         OrderE order = new OrderE();
         order.setId(orderVO.getId());
-        order.setUserName(orderVO.getUserName());
+        order.setUsername(orderVO.getUsername());
         order.setStatus(orderVO.getStatus());
         String ids = "";
         for (Long id : orderVO.getPlaceIds()){
@@ -44,12 +41,12 @@ public class OrderE {
         return order;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String userName) {
+        this.username = userName;
     }
 
     public int getStatus() {

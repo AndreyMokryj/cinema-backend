@@ -4,7 +4,7 @@ import java.util.List;
 
 public class OrderVO {
     private Long id;
-    private String userName;
+    private String username;
     private int status;
 
     private List<Long> placeIds;
@@ -18,12 +18,12 @@ public class OrderVO {
     }
 
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public int getStatus() {

@@ -66,7 +66,7 @@ public class OrderController {
     @PostMapping(path="/book/")
     public boolean bookPlaces(@RequestBody OrderVO orderVO) {
         OrderE order = OrderE.fromVO(orderVO);
-        if (retrieveUser(orderVO.getUserName()) == null){
+        if (retrieveUser(orderVO.getUsername()) == null){
             return false;
         }
 
@@ -84,7 +84,7 @@ public class OrderController {
 
         for (Long id : orderVO.getPlaceIds()) {
             PlaceE placeE = getPlace(id);
-            placeE.setUserName(orderVO.getUserName());
+            placeE.setUsername(orderVO.getUsername());
             placeRepository.save(placeE);
         }
         return true;

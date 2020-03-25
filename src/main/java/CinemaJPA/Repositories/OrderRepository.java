@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 
 public interface OrderRepository extends CrudRepository<OrderE, Long> {
-    @Query("SELECT o FROM orders o where o.userName = :un")
+    @Query("SELECT o FROM orders o where o.username = :un")
     @Transactional
     public Iterable<OrderE> findByUN(@PathVariable String un);
 }

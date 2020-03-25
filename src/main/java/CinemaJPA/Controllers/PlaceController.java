@@ -62,7 +62,7 @@ public class PlaceController {
         PlaceE place = getPlace(id);
         if(place.getStatus() == 0 && retrieveUser(userVO.getUsername()) != null){
             place.setStatus(1);
-            place.setUserName(userVO.getUsername());
+            place.setUsername(userVO.getUsername());
             placeRepository.save(place);
             return true;
         }
@@ -74,7 +74,7 @@ public class PlaceController {
     public void unselectPlace(@PathVariable long id) {
         PlaceE place = getPlace(id);
         place.setStatus(0);
-        place.setUserName(null);
+        place.setUsername(null);
         placeRepository.save(place);
     }
 
@@ -84,7 +84,7 @@ public class PlaceController {
         for (Long id : ids) {
             PlaceE placeE = getPlace(id);
             placeE.setStatus(0);
-            placeE.setUserName(null);
+            placeE.setUsername(null);
             placeRepository.save(placeE);
         }
     }
