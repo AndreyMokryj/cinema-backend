@@ -10,4 +10,8 @@ public interface PlaceRepository extends CrudRepository<PlaceE, Long> {
     @Query("SELECT p FROM places p where p.sessionId = :idd")
     @Transactional
     public Iterable<PlaceE> findBySID(@PathVariable Long idd);
+
+    @Query("SELECT p FROM places p where p.username = :un and  p.status = 1")
+    @Transactional
+    public Iterable<PlaceE> findByUN(@PathVariable String un);
 }

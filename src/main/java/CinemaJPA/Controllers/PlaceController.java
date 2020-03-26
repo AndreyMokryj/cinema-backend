@@ -57,6 +57,14 @@ public class PlaceController {
     }
 
     @CrossOrigin(origins = "*")
+    @GetMapping(path="/user/{un}")
+    public @ResponseBody
+    Iterable<PlaceE> getByUN(@PathVariable String un) {
+        // This returns a JSON or XML with the users
+        return placeRepository.findByUN(un);
+    }
+
+    @CrossOrigin(origins = "*")
     @PostMapping(path="/select/{id}")
     public boolean selectPlace(@PathVariable long id, @RequestBody UserVO userVO) {
         PlaceE place = getPlace(id);
