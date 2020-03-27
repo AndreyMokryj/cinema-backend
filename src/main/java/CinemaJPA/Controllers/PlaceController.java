@@ -57,11 +57,11 @@ public class PlaceController {
     }
 
     @CrossOrigin(origins = "*")
-    @GetMapping(path="/user/{un}")
+    @PostMapping(path="/user/")
     public @ResponseBody
-    Iterable<PlaceE> getByUN(@PathVariable String un) {
+    Iterable<PlaceE> getByUN(@RequestBody UserVO userVO) {
         // This returns a JSON or XML with the users
-        return placeRepository.findByUN(un);
+        return placeRepository.findByUN(userVO.getUsername());
     }
 
     @CrossOrigin(origins = "*")

@@ -19,6 +19,8 @@ public class SessionE {
     @Column(name="date_time")
     private LocalDateTime dateTime;
 
+    private int price;
+
     public Long getId() {
         return id;
     }
@@ -48,6 +50,15 @@ public class SessionE {
         session.setId(sessionVO.getId());
         session.setMovieId(sessionVO.getMovieId());
         session.setDateTime(sessionVO.getDateTime());
+        session.setPrice(sessionVO.getPrice());
         return session;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

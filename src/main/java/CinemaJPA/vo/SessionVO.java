@@ -6,6 +6,7 @@ public class SessionVO {
     private Long id;
     private Long movieId;
     private LocalDateTime dateTime;
+    private int price;
 
     public Long getId() {
         return id;
@@ -30,5 +31,13 @@ public class SessionVO {
 
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

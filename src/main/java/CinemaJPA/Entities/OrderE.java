@@ -13,7 +13,12 @@ public class OrderE {
 
     @Column(name="user_name")
     private String username;
+
+    @Column(name="order_status")
     private int status;
+
+    @Column(name="order_sum")
+    private int sum;
 
     @Column(name="place_ids")
     private String placeIds;
@@ -33,6 +38,7 @@ public class OrderE {
         order.setId(orderVO.getId());
         order.setUsername(orderVO.getUsername());
         order.setStatus(orderVO.getStatus());
+        order.setSum(orderVO.getSum());
         String ids = "";
         for (Long id : orderVO.getPlaceIds()){
             ids += id + " ";
@@ -63,5 +69,13 @@ public class OrderE {
 
     public void setPlaceIds(String placeIds) {
         this.placeIds = placeIds;
+    }
+
+    public int getSum() {
+        return sum;
+    }
+
+    public void setSum(int sum) {
+        this.sum = sum;
     }
 }

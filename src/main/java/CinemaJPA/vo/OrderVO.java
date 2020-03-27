@@ -5,6 +5,7 @@ import java.util.List;
 public class OrderVO {
     private Long id;
     private String username;
+    private int sum;
     private int status;
 
     private List<Long> placeIds;
@@ -40,5 +41,13 @@ public class OrderVO {
 
     public void setPlaceIds(List<Long> placeIds) {
         this.placeIds = placeIds;
+    }
+
+    public int getSum() {
+        return sum;
+    }
+
+    public void setSum(int sum) {
+        this.sum = sum;
     }
 }
