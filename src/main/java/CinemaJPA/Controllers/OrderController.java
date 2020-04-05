@@ -7,6 +7,7 @@ import CinemaJPA.Repositories.OrderRepository;
 import CinemaJPA.Repositories.PlaceRepository;
 import CinemaJPA.Repositories.UserRepository;
 import CinemaJPA.vo.OrderVO;
+import CinemaJPA.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
@@ -46,6 +47,15 @@ public class OrderController {
         }
     }
 
+    public void unbookPlaces(Iterable<Long> ids) {
+        for (Long id : ids) {
+            PlaceE placeE = getPlace(id);
+            placeE.setStatus(0);
+            placeE.setUsername(null);
+            placeRepository.save(placeE);
+        }
+    }
+
     @CrossOrigin(origins = "*")
     @GetMapping(path="/")
     public @ResponseBody
@@ -54,13 +64,39 @@ public class OrderController {
     }
 
     @CrossOrigin(origins = "*")
-    @GetMapping(path="/user/{user}")
+    @PostMapping(path="/user/")
     public @ResponseBody
-    Iterable<OrderE> getByUN(@PathVariable String user) {
+    Iterable<OrderE> getByUN(@RequestBody UserVO user) {
         // This returns a JSON or XML with the users
-        return orderRepository.findByUN(user);
+        return orderRepository.findByUN(user.getUsername());
     }
 
+    @CrossOrigin(origins = "*")
+    @PostMapping(path="/pay/")
+    public boolean payOrder(@RequestBody OrderVO orderVO) {
+        OrderE order = OrderE.fromVO(orderVO);
+        if (retrieveUser(orderVO.getUsername()) == null){
+            return false;
+        }
+
+        order.setStatus(1);
+        orderRepository.save(order);
+        return true;
+    }
+
+    @CrossOrigin(origins = "*")
+    @PostMapping(path="/cancel/")
+    public boolean cancelOrder(@RequestBody OrderVO orderVO) {
+        OrderE order = OrderE.fromVO(orderVO);
+        if (retrieveUser(orderVO.getUsername()) == null){
+            return false;
+        }
+
+        unbookPlaces(orderVO.getPlaceIds());
+        order.setStatus(-1);
+        orderRepository.save(order);
+        return true;
+    }
 
     @CrossOrigin(origins = "*")
     @PostMapping(path="/book/")
