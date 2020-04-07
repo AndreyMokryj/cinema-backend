@@ -3,13 +3,13 @@ version: '3.4'
 services:
   cinema:
     image: avm0/cinema:cinema
-        build:
-          context: .
+    build:
+      context: .
     ports:
       - 4444:4444
 
     environment:
-      MYSQL_URL: jdbc:mysql://localhost:3306/cinema?serverTimezone=UTC
+      MYSQL_URL: jdbc:mysql://host.docker.internal:3306/cinema?serverTimezone=UTC
       MYSQLUSERNAME: root
       MYSQLPASSWORD: 12345678
       PORT: 4444
